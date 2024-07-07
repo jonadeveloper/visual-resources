@@ -1,13 +1,9 @@
 const categoriesRouter = require('./categoriesRouter');
-const iconsRouter = require('./iconsRouter');
-const imagesRouter = require('./imagesRouter');
-const logosRouter = require('./logosRouter');
+const resourcesRouter = require('./resourcesRouter');
 
 function routerApi(app) {
-  app.use('/category', categoriesRouter);
-  app.use('/icons', iconsRouter);
-  app.use('/images', imagesRouter);
-  app.use('/logos', logosRouter);
+  app.use('/categories', categoriesRouter);
+  app.use('/resources', resourcesRouter);
 }
 
 module.exports = routerApi;
