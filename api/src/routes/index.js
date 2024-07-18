@@ -1,12 +1,14 @@
 const express = require('express');
-const categoriesRouter = require('./categoriesRouter');
-const resourcesRouter = require('./resourcesRouter');
+const categoriesGet = require('./crud/categoriesCrud/categoriesGet');
+const categoryCreated = require('./crud/categoriesCrud/categoriesPost');
+const resourcesGet = require('./crud/resourcesCrud/resourcesGet');
 
 function routerApi(app) {
   const router = express.Router();
   app.use('/api/v1', router);
-  router.use('/categories', categoriesRouter);
-  router.use('/resources', resourcesRouter);
+  router.use('/categories', categoriesGet);
+  router.use('/categorycreated', categoryCreated);
+  router.use('/resources', resourcesGet);
 }
 
 module.exports = routerApi;
