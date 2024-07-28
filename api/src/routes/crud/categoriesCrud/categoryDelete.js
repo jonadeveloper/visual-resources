@@ -1,12 +1,11 @@
 const express = require('express');
 const router = express.Router();
+const data = require('../../../data/resources.json');
 
-router.put('/:id', (req, res) => {
-  const body = req.body;
+router.delete('/:id', (req, res) => {
   const { id } = req.params;
   res.json({
-    message: 'created',
-    data: body,
+    message: 'deleted',
     id,
   });
 });
