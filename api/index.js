@@ -6,7 +6,7 @@ const port = 3000;
 app.use(express.json());
 
 app.get('/', (req, res) => {
-  res.send('Hola, bienvenidos al futuro');
+  res.send('');
 });
 
 app.listen(port, () => {
