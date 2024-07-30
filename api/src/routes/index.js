@@ -6,17 +6,23 @@ const categoryUpdatePartial = require('./crud/categoriesCrud/categoriesPatch');
 const categoryUpdate = require('./crud/categoriesCrud/categoriesPut');
 const resourcesGet = require('./crud/resourcesCrud/resourcesGet');
 const resourceforid = require('./crud/resourcesCrud/resourceGet');
+const resourceDelete = require('./crud/resourcesCrud/resourceDelete');
+const resourceUpdatePartial = require('./crud/resourcesCrud/resourcesPatch');
+const resourceUpdate = require('./crud/resourcesCrud/resourcesPut');
 
 function routerApi(app) {
   const router = express.Router();
   app.use('/api/v1', router);
-  router.use('/categories', categoriesGet);
+  router.use('/categoriesall', categoriesGet);
   router.use('/category', categoryforid);
-  router.use('/categorydeleted', categoryDelete);
+  router.use('/categorydelete', categoryDelete);
   router.use('/categorypartialupdate', categoryUpdatePartial);
   router.use('/categoryupdate', categoryUpdate);
   router.use('/resourcesall', resourcesGet);
   router.use('/resource', resourceforid);
+  router.use('/resourcedelete', resourceDelete);
+  router.use('/resourcepartialupdate', resourceUpdatePartial);
+  router.use('/resourceupdate', resourceUpdate);
 }
 
 module.exports = routerApi;
