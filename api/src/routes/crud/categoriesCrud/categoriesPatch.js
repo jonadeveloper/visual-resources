@@ -1,11 +1,11 @@
 const express = require('express');
 const router = express.Router();
 
-router.put('/:id', (req, res) => {
-  const body = req.body;
+router.patch('/', (req, res) => {
   const { id } = req.params;
+  const body = req.body;
   res.json({
-    message: 'created',
+    message: 'parcial update',
     data: body,
     id,
   });

@@ -1,9 +1,9 @@
 const express = require('express');
 const router = express.Router();
 
-router.patch('/', (req, res) => {
-  const { id } = req.params;
+router.put('/:id', (req, res) => {
   const body = req.body;
+  const { id } = req.params;
   res.json({
     message: 'update',
     data: body,
