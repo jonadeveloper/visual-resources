@@ -32,7 +32,7 @@ function routerApi(app) {
 
   router.use('/resourcesall', resourcesGet);
   router.use('/resource', resourceforid);
-  router.use('resourcecreate', resourceCreate);
+  router.use('/resourcecreate', resourceCreate);
   router.use('/resourcedelete', resourceDelete);
   router.use('/resourcepartialupdate', resourceUpdatePartial);
   router.use('/resourceupdate', resourceUpdate);
