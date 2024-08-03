@@ -7,9 +7,9 @@ router.get('/:id', (req, res) => {
   const resource = data.resources.find((re) => re.id === id);
 
   if (resource) {
-    res.json(resource);
+    res.status(200).json(resource);
   } else {
-    res.status(404).send({ message: 'Recurso no encontrada' });
+    res.status(404).json({ message: 'not found' });
   }
 });
 

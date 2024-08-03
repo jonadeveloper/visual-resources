@@ -7,9 +7,9 @@ router.get('/:id', (req, res) => {
   const subcategory = data.subcategories.find((sc) => sc.id === id);
 
   if (subcategory) {
-    res.json(subcategory);
+    res.status(200).json(subcategory);
   } else {
-    res.status(404).send({ message: 'Categoría no encontrada' });
+    res.status(404).json({ message: 'not found' });
   }
 });
 
