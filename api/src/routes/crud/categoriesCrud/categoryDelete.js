@@ -4,7 +4,7 @@ const data = require('../../../data/resources.json');
 
 router.delete('/:id', (req, res) => {
   const { id } = req.params;
-  res.json({
+  res.status(200).json({
     message: 'deleted',
     id,
   });

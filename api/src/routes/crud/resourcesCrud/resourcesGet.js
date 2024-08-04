@@ -5,7 +5,7 @@ const data = require('../../../data/resources.json');
 router.get('/', (req, res) => {
   const resourcesAll = [];
   resourcesAll.push(data.resources);
-  res.send(resourcesAll);
+  res.status(200).send(resourcesAll);
 });
 
 module.exports = router;

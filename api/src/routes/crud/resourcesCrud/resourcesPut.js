@@ -4,7 +4,7 @@ const router = express.Router();
 router.put('/:id', (req, res) => {
   const body = req.body;
   const { id } = req.params;
-  res.json({
+  res.status.json({
     message: 'update',
     data: body,
     id,

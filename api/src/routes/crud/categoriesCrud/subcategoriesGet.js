@@ -5,11 +5,7 @@ const data = require('../../../data/resources.json');
 router.get('/', (req, res) => {
   const subcategories = [];
   subcategories.push(data.subcategories);
-  res.json(subcategories);
-});
-
-router.get('/filter', (req, res) => {
-  res.send('hola soy un filtro de tus categorias');
+  res.status(200).json(subcategories);
 });
 
 module.exports = router;
