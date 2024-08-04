@@ -5,7 +5,7 @@ router.put('/:id', (req, res) => {
   const body = req.body;
   const { id } = req.params;
   res.status(200).json({
-    message: 'update',
+    message: 'category updated successfully',
     data: body,
     id,
   });

@@ -5,7 +5,7 @@ router.patch('/', (req, res) => {
   const { id } = req.params;
   const body = req.body;
   res.status(200).json({
-    message: 'parcial update',
+    message: 'resource partially updated successfully',
     data: body,
     id,
   });

@@ -5,7 +5,7 @@ const data = require('../../../data/resources.json');
 router.delete('/:id', (req, res) => {
   const { id } = req.params;
   res.status(200).json({
-    message: 'deleted',
+    message: 'subcategory successfully deleted',
     id,
   });
 });
