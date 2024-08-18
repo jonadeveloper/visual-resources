@@ -1,11 +1,11 @@
 const express = require('express');
 const router = express.Router();
-const data = require('../../../data/resources.json');
+const ResourcesService = require('../../../services/resource.service.js');
+const service = new ResourcesService();
 
 router.get('/:id', (req, res) => {
   const { id } = req.params;
-  const resource = data.resources.find((re) => re.id === id);
-
+  const resource = service.findeOne(id);
   if (resource) {
     res.status(200).json(resource);
   } else {

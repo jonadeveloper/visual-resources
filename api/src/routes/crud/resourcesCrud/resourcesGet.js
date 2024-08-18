@@ -1,11 +1,11 @@
 const express = require('express');
+const ResourcesService = require('../../../services/resource.service.js');
 const router = express.Router();
-const data = require('../../../data/resources.json');
+const service = new ResourcesService();
 
 router.get('/', (req, res) => {
-  const resourcesAll = [];
-  resourcesAll.push(data.resources);
-  res.status(200).send(resourcesAll);
+  const resources = service.find();
+  res.status(200).send(resources);
 });
 
 module.exports = router;
