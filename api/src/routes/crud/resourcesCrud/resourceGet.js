@@ -5,7 +5,7 @@ const service = new ResourcesService();
 
 router.get('/:id', (req, res) => {
   const { id } = req.params;
-  const resource = service.findeOne(id);
+  const resource = service.findOne(id);
   if (resource) {
     res.status(200).json(resource);
   } else {

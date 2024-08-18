@@ -20,7 +20,7 @@ class ResourcesService {
   }
 
   findOne(id) {
-    return this.resources.find((item) => item.id === id);
+    return this.resources[0].find((item) => item.id === id);
   }
 
   update() {}
